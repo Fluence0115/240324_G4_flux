@@ -47,11 +47,13 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
     auto Aluminum1Sol = new G4Tubs("Aluminum1", 3.6 *cm, .5 * Aluminum1Diameter, .5 * Aluminum1Height, 0., 360. * deg);     
     auto Aluminum1Log = new G4LogicalVolume(Aluminum1Sol, matAluminum, "Aluminum1");     
     new G4PVPlacement(nullptr, Aluminum1Pos, Aluminum1Log, "Aluminum1", worldLog, false, 0);     
-
+    
+    /*
     G4VisAttributes* va_Aluminum1 = 
     new G4VisAttributes(G4Colour(0.0, 1.0, 0.0, 0.3));
     va_Aluminum1->SetForceSolid(true);
-    a_Aluminum1->SetVisAttributes(va_Aluminum1);
+    la_Aluminum1->SetVisAttributes(va_Aluminum1);
+    */
     
     // Aluminum2_celling
     auto Aluminum2Pos = G4ThreeVector(0., 0., 6.27 * cm);
