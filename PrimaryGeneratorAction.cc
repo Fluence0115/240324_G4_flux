@@ -6,12 +6,14 @@
 
 #include "PrimaryGeneratorAction.hh"
 
+// 생성자
 PrimaryGeneratorAction::PrimaryGeneratorAction()
     : G4VUserPrimaryGeneratorAction()
 {
     fPrimary = new G4ParticleGun();
 }
 
+// 소멸자
 PrimaryGeneratorAction::~PrimaryGeneratorAction()
 {
     delete fPrimary;
@@ -19,9 +21,9 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event *anEvent)
 {
-    fPrimary->SetParticleDefinition(G4Neutron::Definition());
+    fPrimary->SetParticleDefinition(G4Gamma::Definition());
     fPrimary->SetParticleEnergy(2.2*MeV);
-    fPrimary->SetParticlePosition(G4ThreeVector());
+    fPrimary->SetParticlePosition(G4ThreeVector(0., 0., 10.* cm));
     fPrimary->SetParticleMomentumDirection(G4RandomDirection());
     
     fPrimary->GeneratePrimaryVertex(anEvent);
