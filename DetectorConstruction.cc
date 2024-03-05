@@ -51,7 +51,7 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
     G4VisAttributes* va_Aluminum1 = 
     new G4VisAttributes(G4Colour(0.0, 1.0, 0.0, 0.3));
     va_Aluminum1->SetForceSolid(true);
-    va_Aluminum1->SetVisAttributes(va_Aluminum1);
+    a_Aluminum1->SetVisAttributes(va_Aluminum1);
     
     // Aluminum2_celling
     auto Aluminum2Pos = G4ThreeVector(0., 0., 6.27 * cm);
