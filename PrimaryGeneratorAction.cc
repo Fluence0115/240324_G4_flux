@@ -21,9 +21,9 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event *anEvent)
 {
-    fPrimary->SetParticleDefinition(G4Gamma::Definition());
-    fPrimary->SetParticleEnergy(2.2*MeV);
-    fPrimary->SetParticlePosition(G4ThreeVector(0., 0., 10.* cm));
+    fPrimary->SetParticleDefinition(G4Neutron::Definition());
+    fPrimary->SetParticleEnergy(0.1*MeV);
+    fPrimary->SetParticlePosition(G4ThreeVector(0., 0., 7.* cm));
     fPrimary->SetParticleMomentumDirection(G4RandomDirection());
     
     fPrimary->GeneratePrimaryVertex(anEvent);
