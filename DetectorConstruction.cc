@@ -105,10 +105,12 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
     auto Zirlo1Log = new G4LogicalVolume(Zirlo1Sol, matZirlo, "Zirlo1");     
     new G4PVPlacement(nullptr, Zirlo1Pos, Zirlo1Log, "Zirlo1", worldLog, false, 0);     
 
+    /*
     G4VisAttributes* va_Zirlo1 =
     new G4VisAttributes(G4Colour(0.0, 1.0, 0.0, 0.3));
     va_Zirlo1->SetForceSolid(true);
-    // va_Zirlo1->SetVisAttributes(va_Zirlo1);
+    Ia_Zirlo1->SetVisAttributes(va_Zirlo1);
+    */
 
     // Uranium1
     auto Uranium1Pos = G4ThreeVector(0., 0., -92.94 * cm);
